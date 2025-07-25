@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "EasonPro";
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-regular-webfont.eot");
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-regular-webfont.woff") format("woff"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-regular-webfont.ttf") format("truetype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-regular-webfont.svg#EasonProregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EasonPro";
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-italic-webfont.eot");
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-italic-webfont.woff") format("woff"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-italic-webfont.ttf") format("truetype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-italic-webfont.svg#EasonProitalic") format("svg");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EasonPro";
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-bold-webfont.eot");
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-bold-webfont.woff") format("woff"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-bold-webfont.ttf") format("truetype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/eason/v1/easonpro-bold-webfont.svg#EasonProBold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CronosPro";
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/cronos/v1/cronospro-regular-webfont.eot");
+    src: url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/cronos/v1/cronospro-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/cronos/v1/cronospro-regular-webfont.woff") format("woff"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/cronos/v1/cronospro-regular-webfont.ttf") format("truetype"),
+        url("https://d1h9a8s8eodvjz.cloudfront.net/fonts/cronos/v1/cronospro-regular-webfont.svg#CronosProregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styling */
+
+body {
+    font-family: "EasonPro", sans-serif;
+    color: #161616;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://wiki.guildwars.com/images/6/68/Ascalon_loading_screen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 12px;
+    background-attachment: fixed;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Banner styling */
+
+.icon {
+    display: flex;
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+    padding: 0 25px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin: 0 25px;
+}
+
+.bannerIconLogo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#home {
+    scroll-margin-top: 125px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div a:hover {
+    transform: translate(2px, 2px);
+}
+
+.horizontal-list {
+    position: fixed;
+    top: 66px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: row;
+    width: 300px;
+    height: 25px;
+    color: white;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    border: 1px solid black;
+    list-style: none;
+    margin: 0;
+}
+
+ul a:link {
+    text-decoration: none;
+    color: white;
+}
+
+ul a:visited {
+    color: white;
+}
+
+ul a:hover {
+    color: rgb(246, 161, 101);
+}
+
+li {
+    margin-right: 20px;
+}
+
+#,
+#,
+# {
+    scroll-margin-top: 66px;
+}
+
+/* Main styling */
