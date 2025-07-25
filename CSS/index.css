@@ -47,16 +47,29 @@
 body {
     font-family: "EasonPro", sans-serif;
     color: #161616;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-image: url("https://wiki.guildwars.com/images/3/35/Ascalon_%28pre-Searing%29_loading_screen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left 55px;
+    background-position: left 12px;
     background-attachment: fixed;
+    opacity: 0.8;
+    z-index: -1;
 }
 
 /* Banner styling */
 
 .icon {
+    display: flex;
+    justify-content: flex-start;
     width: 50px;
     height: 50px;
     padding: 0 25px;
@@ -65,7 +78,7 @@ body {
 .logo img {
     width: 150px;
     height: auto;
-    padding: 27.5px 25px 0 25px;
+    margin: 0 25px;
 }
 
 .bannerIconLogo{
@@ -77,13 +90,14 @@ body {
     justify-content: space-between;
     z-index: 1000;
     width: 100%;
-    height: 100px;
-    background-color: #969696;
+    height: 65px;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
-.icon {
-    display: flex;
-    justify-content: flex-start;
+#home {
+    scroll-margin-top: 125px;
 }
 
 .logo {
@@ -92,46 +106,121 @@ body {
     justify-content: space-around;
 }
 
+div a:hover {
+    transform: translate(2px, 2px);
+}
+
 .horizontal-list {
     position: fixed;
-    top: 100px;
+    top: 66px;
     left: 0;
     display: flex;
     align-items: center;
     z-index: 1000;
     flex-direction: row;
-    width: 100%;
+    width: 300px;
     height: 25px;
-    background-color: #969696;
+    color: white;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    border: 1px solid black;
     list-style: none;
     margin: 0;
+}
+
+ul a:link {
+    text-decoration: none;
+    color: white;
+}
+
+ul a:visited {
+    color: white;
+}
+
+ul a:hover {
+    color: rgb(246, 161, 101);
 }
 
 li {
     margin-right: 20px;
 }
 
-
+#game,
+#lore,
+#website {
+    scroll-margin-top: 66px;
+}
 
 /* Main styling */
 
 main {
     position: relative;
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    margin-top: 125px;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template:  225px 225px 125px 125px 75px 75px / repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
 }
 
 .section {
-    width: 500px;
-    height: auto;
+    width: auto;
+    height: 100%;
     padding: 20px;
-    margin: 20px 0;
+    margin: 0 0;
     background-color: rgba(182, 169, 169, 0.8);
     border: 1px solid black;
     border-radius: 4px;
+    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image {
+    width: auto;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    box-sizing: border-box;
+}
+
+#game {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+
+#lore {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+}
+
+#website {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 2;
+}
+
+#balthazar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+}
+
+#charr {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#prophecies-screenshot {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 3;
+}
+
+#cynn {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 5; 
 }
 
 /* Footer styling */
