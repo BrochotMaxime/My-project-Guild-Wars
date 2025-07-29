@@ -47,6 +47,7 @@
 body {
     font-family: "EasonPro", sans-serif;
     color: #161616;
+    font-size: 16px;;
 }
 
 body::before {
@@ -56,13 +57,21 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("https://wiki.guildwars.com/images/e/eb/%22Rooftops%22_concept_art.jpg");
+    background-image: url("https://wiki.guildwars.com/images/thumb/3/39/Monastery_1.jpg/1280px-Monastery_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left 66px;
     background-attachment: fixed;
     opacity: 0.8;
     z-index: -1;
+}
+
+@media only screen and (max-width: 1080px) {
+    body::before {
+        /* background-image: url("https://wiki.guildwars.com/images/d/d9/AscalonCity.jpg"); */
+        background-position: center;
+    }
+
+
 }
 
 /* Banner styling */
@@ -91,9 +100,13 @@ body::before {
     z-index: 1000;
     width: 100%;
     height: 65px;
-    background-color: rgb(150, 150, 150);
-    border-radius: 5px;
+    padding-bottom: 25px;
+    background-color: rgba(90, 90, 90, 0.9);
+    /* border-radius: 5px; */
     border: 1px solid black;
+    /* border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black; */
 }
 
 #home {
@@ -104,6 +117,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 25px;
 }
 
 div a:hover {
@@ -121,9 +135,12 @@ div a:hover {
     width: 300px;
     height: 25px;
     color: white;
-    background-color: rgb(150, 150, 150);
-    border-radius: 5px;
-    border: 1px solid black;
+    /* background-color: rgba(90, 90, 90, 0.9); */
+    /* border-radius: 5px; */
+    /* border: 1px solid black; */
+    /* border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-left: 1px solid black; */
     list-style: none;
     margin: 0;
 }
@@ -145,10 +162,52 @@ li {
     margin-right: 20px;
 }
 
-#,
-#,
-# {
+#game,
+#lore,
+#website {
     scroll-margin-top: 66px;
+}
+
+.logo-small {
+    display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+    .logo {
+        display: none;
+    }
+
+    .icon img {
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 10px 0 0 5px;
+    }
+
+    .logo-small img {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 5px 15px;
+    }
+
+    .bannerIconLogo {
+        height: 40px;
+    }
+
+    .horizontal-list {
+        top: 45px;
+        width: 100%;
+        height: 20px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .logo-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+        padding: 25px 0 0 0;
+    }
 }
 
 /* Main styling */
