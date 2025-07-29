@@ -56,7 +56,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url("https://static.wikia.nocookie.net/gwwikia/images/9/9f/Pre-Searing_Ascalon_Loading_Screen.jpg/revision/latest/scale-to-width-down/1000?cb=20080829172034");
+    background-image: url("https://static.wikia.nocookie.net/gwwikia/images/9/9f/Pre-Searing_Ascalon_Loading_Screen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: left 12px; */
@@ -67,7 +67,7 @@ body::before {
 
 @media only screen and (max-width: 768px) {
     body::before {
-        background-image: url("https://static.wikia.nocookie.net/gwwikia/images/9/9f/Pre-Searing_Ascalon_Loading_Screen.jpg/revision/latest/scale-to-width-down/1000?cb=20080829172034");
+        background-image: url("https://static.wikia.nocookie.net/gwwikia/images/9/9f/Pre-Searing_Ascalon_Loading_Screen.jpg");
         background-position: center;
     }
 }
